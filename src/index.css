@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   FOCCO DESIGN SYSTEM
+   Método FOCCO - Desenvolvimento Pessoal
+   ======================================== */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Azul petróleo profissional */
+    --primary: 196 43% 30%;           /* #2C5F6F - Azul petróleo principal */
+    --primary-light: 196 43% 38%;     /* #3A7A8E - Hover states */
+    --primary-dark: 196 43% 22%;      /* #1E4450 - Textos escuros */
+    --primary-foreground: 0 0% 100%;  /* Texto sobre primary */
+    
+    /* Secondary Colors - Bege serenidade */
+    --secondary: 40 35% 88%;          /* #E8DCC4 - Bege claro */
+    --secondary-dark: 40 35% 75%;     /* Hover bege */
+    --secondary-foreground: 196 43% 22%;
+    
+    /* Accent Colors - Dourado destaque */
+    --accent: 35 45% 65%;             /* #D4A574 - Dourado suave */
+    --accent-light: 35 45% 75%;       /* Dourado claro */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Neutral Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;        /* #1F2937 */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    
+    --muted: 0 0% 97%;                /* #F7F7F7 */
+    --muted-foreground: 220 10% 46%;  /* #6B7280 */
+    
+    /* Status Colors */
+    --success: 142 71% 45%;           /* #10B981 */
+    --success-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;         /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+    
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* UI Elements */
+    --border: 220 13% 85%;
+    --input: 220 13% 91%;
+    --ring: 196 43% 30%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-light)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(44, 95, 111, 0.08);
+    --shadow-md: 0 4px 12px rgba(44, 95, 111, 0.12);
+    --shadow-lg: 0 8px 24px rgba(44, 95, 111, 0.16);
+    --shadow-xl: 0 12px 36px rgba(44, 95, 111, 0.2);
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --primary: 196 43% 45%;
+    --primary-light: 196 43% 55%;
+    --primary-dark: 196 43% 35%;
+    --primary-foreground: 0 0% 100%;
+    
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
+    
+    --card: 220 20% 13%;
+    --card-foreground: 0 0% 95%;
+    
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
+    
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground 
+           px-8 py-4 rounded-xl font-semibold text-lg
+           transition-all duration-300 shadow-md hover:shadow-xl
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-light text-accent-foreground
+           px-6 py-3 rounded-lg font-semibold
+           transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
+           px-6 py-3 rounded-lg font-semibold
+           transition-all duration-300;
+  }
+  
+  /* Card Variants */
+  .card-elevated {
+    @apply bg-card rounded-2xl p-8
+           shadow-md hover:shadow-xl
+           transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .card-outline {
+    @apply bg-card rounded-2xl p-8 border-2 border-border
+           hover:border-primary transition-all duration-300;
+  }
+  
+  /* Section Styles */
+  .section-padding {
+    @apply py-20 md:py-32 px-4;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
