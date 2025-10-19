@@ -1,14 +1,20 @@
 import { Link } from 'react-router-dom';
 import logoFocco from '@/assets/logo-focco-small.png';
+import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+
+  const whatsappNumber = '558399387450';
+  const whatsappMessage = 'Olá! Gostaria de receber atualizações do Método FOCCO.';
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   const socialLinks = [
-    { icon: 'fa-instagram', url: '#', label: 'Instagram' },
-    { icon: 'fa-linkedin', url: '#', label: 'LinkedIn' },
-    { icon: 'fa-facebook', url: '#', label: 'Facebook' },
-    { icon: 'fa-youtube', url: '#', label: 'YouTube' },
+    { icon: 'fa-instagram', url: 'https://instagram.com/metodofocco', label: 'Instagram' },
+    { icon: 'fa-whatsapp', url: whatsappLink, label: 'WhatsApp' },
   ];
 
   const quickLinks = [
@@ -60,22 +66,22 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm">
                 <i className="fas fa-envelope text-accent mt-1"></i>
-                <a 
-                  href="mailto:contato@metodofocco.com.br" 
+                <a
+                  href="mailto:focconavida@gmail.com"
                   className="text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  contato@metodofocco.com.br
+                  focconavida@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm">
                 <i className="fab fa-whatsapp text-accent mt-1"></i>
-                <a 
-                  href="https://wa.me/5511999999999" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/558399387450"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  (11) 99999-9999
+                  (83) 99378-7450
                 </a>
               </li>
             </ul>
@@ -91,11 +97,15 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Seu e-mail"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 className="flex-1 px-4 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-accent text-sm"
               />
-              <button className="btn-accent">
-                <i className="fas fa-paper-plane"></i>
-              </button>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button className="btn-accent">
+                  <i className="fab fa-whatsapp"></i>
+                </Button>
+              </a>
             </div>
           </div>
         </div>

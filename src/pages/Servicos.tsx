@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const Servicos = () => {
+  const whatsappNumber = '558399387450';
+  const whatsappMessage = 'Olá, seja bem-vindo! Como posso te ajudar?';
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
   const servicos = [
     {
       id: 'individual',
@@ -174,12 +176,12 @@ const Servicos = () => {
                     <p className="text-muted-foreground leading-relaxed">
                       {servico.detalhes.paraQuem}
                     </p>
-                    <Link to="/contato">
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="block">
                       <Button className="btn-hero mt-6 w-full">
-                        <i className="fas fa-calendar-check mr-2"></i>
-                        Agendar Consulta
+                        <i className="fab fa-whatsapp mr-2"></i>
+                        Falar no WhatsApp
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -235,14 +237,14 @@ const Servicos = () => {
               Não sabe qual serviço escolher?
             </h2>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Agende uma conversa gratuita e vamos encontrar juntos a melhor solução para sua jornada.
+              Fale conosco no WhatsApp e vamos encontrar juntos a melhor solução para sua jornada.
             </p>
-            <Link to="/contato">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button className="bg-accent hover:bg-accent-light text-accent-foreground text-lg px-12 py-6 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
-                <i className="fas fa-comments mr-3"></i>
-                Falar com um Especialista
+                <i className="fab fa-whatsapp mr-3"></i>
+                Falar no WhatsApp
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

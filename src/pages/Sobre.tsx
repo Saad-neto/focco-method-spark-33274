@@ -3,6 +3,9 @@ import Footer from '@/components/Footer';
 import mentorImage from '@/assets/mentor.jpg';
 
 const Sobre = () => {
+  const whatsappNumber = '558399387450';
+  const whatsappMessage = 'Olá, seja bem-vindo! Como posso te ajudar?';
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
   const valores = [
     {
       icon: 'fa-heart',
@@ -213,10 +216,10 @@ const Sobre = () => {
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
               Descubra como o Método FOCCO pode ajudar você a alcançar clareza, propósito e realização.
             </p>
-            <a href="/contato">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <button className="bg-accent hover:bg-accent-light text-accent-foreground text-lg px-12 py-6 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
-                <i className="fas fa-calendar-check mr-3"></i>
-                Agendar Sessão Gratuita
+                <i className="fab fa-whatsapp mr-3"></i>
+                Falar no WhatsApp
               </button>
             </a>
           </div>

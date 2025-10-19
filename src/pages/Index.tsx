@@ -6,6 +6,9 @@ import heroImage from '@/assets/hero-bg.jpg';
 import clarityImage from '@/assets/clarity-illustration.jpg';
 
 const Index = () => {
+  const whatsappNumber = '558399387450';
+  const whatsappMessage = 'Olá, seja bem-vindo! Como posso te ajudar?';
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
   const pilares = [
     {
       icon: 'fa-bullseye',
@@ -100,12 +103,12 @@ const Index = () => {
               Clareza mental, inteligência emocional e alta performance para uma vida com propósito
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/contato">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button className="btn-hero text-lg px-10 py-6">
-                  <i className="fas fa-calendar-check mr-3"></i>
-                  Agendar Sessão Gratuita
+                  <i className="fab fa-whatsapp mr-3"></i>
+                  Falar no WhatsApp
                 </Button>
-              </Link>
+              </a>
               <Link to="/sobre">
                 <Button className="btn-outline bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-10 py-6">
                   <i className="fas fa-compass mr-3"></i>
@@ -254,14 +257,14 @@ const Index = () => {
               Pronto para começar sua transformação?
             </h2>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Agende uma sessão gratuita e descubra como o Método FOCCO pode transformar sua vida pessoal e profissional.
+              Fale conosco no WhatsApp e descubra como o Método FOCCO pode transformar sua vida pessoal e profissional.
             </p>
-            <Link to="/contato">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button className="bg-accent hover:bg-accent-light text-accent-foreground text-lg px-12 py-6 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105">
-                <i className="fas fa-calendar-check mr-3"></i>
-                Agende sua Sessão Gratuita
+                <i className="fab fa-whatsapp mr-3"></i>
+                Falar no WhatsApp
               </Button>
-            </Link>
+            </a>
             <p className="text-primary-foreground/70 text-sm mt-4">
               Sem compromisso • Primeira sessão gratuita • Resposta em 24h
             </p>
