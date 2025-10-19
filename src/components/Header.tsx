@@ -35,11 +35,17 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img 
-              src={logoFocco} 
-              alt="FOCCO Mindfulness" 
-              className="h-12 w-auto transition-transform group-hover:scale-105"
-            />
+            <div className="relative">
+              <img 
+                src={logoFocco} 
+                alt="FOCCO Mindfulness" 
+                className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
+                style={{
+                  filter: 'drop-shadow(0 2px 8px rgba(44, 95, 111, 0.15))',
+                  mixBlendMode: 'normal'
+                }}
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
