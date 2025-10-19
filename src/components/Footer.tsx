@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logoFocco from '@/assets/logo-focco-small.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,15 +25,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-2xl">F</span>
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-heading font-bold text-2xl text-primary-foreground">Método</span>
-                <span className="font-heading font-bold text-2xl text-accent">FOCCO</span>
-              </div>
-            </div>
+            <img 
+              src={logoFocco} 
+              alt="FOCCO Mindfulness" 
+              className="h-16 w-auto"
+            />
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Transformando vidas através de clareza mental, inteligência emocional e propósito autêntico.
             </p>

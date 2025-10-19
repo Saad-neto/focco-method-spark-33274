@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import logoFocco from '@/assets/logo-focco-small.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,14 +34,12 @@ const Header = () => {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-primary-foreground font-bold text-xl">F</span>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-heading font-bold text-xl text-primary">Método</span>
-              <span className="font-heading font-bold text-xl text-accent">FOCCO</span>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={logoFocco} 
+              alt="FOCCO Mindfulness" 
+              className="h-12 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
