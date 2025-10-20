@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logoFocco from '@/assets/logo-focco-small.png';
+import logoFocco from '@/assets/logo-vertical-transparent.png';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { toast } from 'sonner';
@@ -31,13 +31,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="space-y-4">
-            <div className="bg-white/10 rounded-lg p-3 inline-block backdrop-blur-sm">
-              <img 
-                src={logoFocco} 
-                alt="FOCCO Mindfulness" 
-                className="h-20 md:h-24 w-auto"
-              />
-            </div>
+            <img
+              src={logoFocco}
+              alt="FOCCO Mindfulness"
+              className="h-32 md:h-40 w-auto"
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+              }}
+            />
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Transformando vidas através de clareza mental, inteligência emocional e propósito autêntico.
             </p>
