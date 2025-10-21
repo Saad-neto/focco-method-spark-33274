@@ -80,7 +80,7 @@ const Sobre = () => {
                 Hoje, já ajudamos centenas de pessoas a encontrarem clareza, propósito e equilíbrio - tanto na vida pessoal quanto profissional.
               </p>
             </div>
-            <div className="md:col-span-2 relative">
+            <div className="md:col-span-2 relative max-w-xs mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3"></div>
               <img
                 src={valeriaFoto}
@@ -172,7 +172,7 @@ const Sobre = () => {
             <h3 className="text-2xl text-center text-primary font-semibold mb-12">Valéria Dias</h3>
 
             <div className="grid md:grid-cols-5 gap-8 items-start mb-12">
-              <div className="md:col-span-2">
+              <div className="md:col-span-2 max-w-xs mx-auto">
                 <img
                   src={valeriaProfile}
                   alt="Valéria Dias - Idealizadora do Método FOCCO"
