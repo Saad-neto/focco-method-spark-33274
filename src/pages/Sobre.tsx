@@ -290,7 +290,7 @@ const Sobre = () => {
       {/* CTA Section */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container-custom text-center">
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="font-heading text-primary-foreground">
               Comece sua jornada de transformação
             </h2>
