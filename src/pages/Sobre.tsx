@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import valeriaProfile from '@/assets/valeria-profile.jpg';
-import beneficiosFocco from '@/assets/beneficios-focco.jpg';
+import valeriaFoto from '@/assets/valeria-foto.png';
 
 const Sobre = () => {
   const whatsappNumber = '5583993787450';
@@ -83,8 +83,8 @@ const Sobre = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl transform rotate-3"></div>
               <img
-                src={beneficiosFocco}
-                alt="Benefícios do Método FOCCO"
+                src={valeriaFoto}
+                alt="Valéria Dias - Fundadora do Método FOCCO"
                 className="relative rounded-2xl shadow-xl w-full"
               />
             </div>
