@@ -139,7 +139,7 @@ const Servicos = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-20 bg-gradient-to-b from-primary/5 to-background">
+      <section className="pt-56 pb-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container-custom px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="font-heading mb-6">Nossos Serviços</h1>
