@@ -31,14 +31,14 @@ const Header = () => {
         isScrolled ? 'bg-background shadow-md' : 'bg-background/95 backdrop-blur-sm'
       }`}
     >
-      <nav className="container-custom py-4 md:py-5 lg:py-6">
+      <nav className="container-custom py-2 md:py-3">
         <div className="flex items-center justify-between px-4 md:px-0">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img
               src={logoFocco}
               alt="FOCCO Mindfulness"
-              className="h-12 sm:h-14 md:h-16 w-auto transition-all duration-300 group-hover:scale-105"
+              className="h-20 sm:h-24 md:h-28 w-auto transition-all duration-300 group-hover:scale-105"
               style={{
                 filter: 'brightness(0) saturate(100%) invert(24%) sepia(69%) saturate(1859%) hue-rotate(175deg) brightness(95%) contrast(90%)'
               }}
