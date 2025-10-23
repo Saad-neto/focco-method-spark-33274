@@ -200,15 +200,12 @@ const GoogleReviews = () => {
             />
             <span className="text-2xl font-bold text-gray-700">Avaliações</span>
           </div>
-          <div className="flex items-center justify-center gap-2 mb-1">
+          <div className="flex items-center justify-center gap-2">
             <span className="text-4xl font-bold text-primary">{rating.toFixed(1)}</span>
             <div className="flex gap-1">
               {renderStars(rating)}
             </div>
           </div>
-          <p className="text-muted-foreground">
-            Baseado em {totalReviews} {totalReviews === 1 ? 'avaliação' : 'avaliações'}
-          </p>
         </a>
       </div>
 
