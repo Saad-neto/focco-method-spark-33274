@@ -191,7 +191,7 @@ INSERT INTO blog_posts (
 <p>Lembre-se: o objetivo não é nunca procrastinar, mas reduzir a frequência e impacto da procrastinação na sua vida. Pequenos passos consistentes criam grandes transformações.</p>
 
 <p><strong>Pronto para parar de procrastinar e começar a agir?</strong> O Método FOCCO pode te ajudar a desenvolver as habilidades e mindset necessários para ação consistente.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&q=80',
   NOW() - INTERVAL '1 day',
@@ -347,7 +347,7 @@ INSERT INTO blog_posts (
 <p>Quando você aprende a dizer não ao que não serve, está dizendo sim ao que realmente importa: seus objetivos, sua saúde, seus relacionamentos genuínos e, principalmente, a você mesmo.</p>
 
 <p><strong>Pronto para desenvolver essa habilidade transformadora?</strong> O Método FOCCO oferece suporte personalizado para estabelecer limites saudáveis e construir uma vida mais equilibrada e autêntica.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&q=80',
   NOW() - INTERVAL '2 days',
@@ -553,7 +553,7 @@ INSERT INTO blog_posts (
 <p>A pergunta não é se vale a pena respirar conscientemente, mas sim: por que você ainda não começou?</p>
 
 <p><strong>Quer aprender a integrar respiração consciente e mindfulness na sua vida de forma estruturada?</strong> O Método FOCCO oferece práticas guiadas e personalizadas para transformar sua relação com estresse, ansiedade e bem-estar.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80',
   NOW() - INTERVAL '3 days',

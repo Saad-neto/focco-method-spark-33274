@@ -288,7 +288,7 @@ INSERT INTO blog_posts (
 <p>E pode ser a habilidade mais transformadora que você desenvolve na vida.</p>
 
 <p><strong>Pronto para desenvolver equilíbrio emocional duradouro?</strong> O Método FOCCO oferece práticas estruturadas e acompanhamento personalizado para fortalecer sua regulação emocional e bem-estar.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''6 days'',
   true,
@@ -579,7 +579,7 @@ INSERT INTO blog_posts (
 <p>E que construir resiliência, comunidade e significado não é auto-indulgência - é resistência.</p>
 
 <p><strong>Pronto para desenvolver ferramentas reais contra ansiedade?</strong> O Método FOCCO oferece abordagem estruturada para reduzir ansiedade e construir bem-estar sustentável no mundo moderno.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''7 days'',
   true,

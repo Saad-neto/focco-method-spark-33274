@@ -80,7 +80,7 @@ CREATE TABLE blog_posts (
   excerpt TEXT NOT NULL,
   content TEXT NOT NULL,
   cover_image TEXT,
-  author TEXT NOT NULL DEFAULT 'Valéria Arcanjo',
+  author TEXT NOT NULL DEFAULT 'Valéria Dias',
   author_avatar TEXT DEFAULT '/assets/valeria-foto-optimized.png',
   published_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -151,7 +151,7 @@ Após executar o SQL, verifique:
 - [ ] Todos os posts estão com `is_published = true`
 - [ ] Os slugs estão únicos e corretos
 - [ ] As datas de publicação estão escalonadas (últimos 10 dias)
-- [ ] O autor está como "Valéria Arcanjo"
+- [ ] O autor está como "Valéria Dias"
 - [ ] O avatar está apontando para `/assets/valeria-foto-optimized.png`
 - [ ] As categorias estão corretas
 - [ ] As tags estão como arrays
@@ -224,7 +224,7 @@ INSERT INTO blog_posts (
   'titulo-novo-artigo',
   'Resumo do artigo...',
   '<h2>Conteúdo HTML do artigo...</h2>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW(),
   true,
@@ -253,7 +253,7 @@ CREATE TABLE blog_posts (
 **Solução:** Os posts já foram inseridos. Para resetar:
 
 ```sql
-DELETE FROM blog_posts WHERE author = 'Valéria Arcanjo';
+DELETE FROM blog_posts WHERE author = 'Valéria Dias';
 ```
 
 E execute o SQL novamente.

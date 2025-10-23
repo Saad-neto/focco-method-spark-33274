@@ -337,7 +337,7 @@ INSERT INTO blog_posts (
 <p>Seu trabalho estará te esperando. E você voltará melhor.</p>
 
 <p><strong>Pronto para redesenhar sua rotina incluindo pausas estratégicas?</strong> O Método FOCCO te ajuda a construir produtividade sustentável com qualidade de vida e bem-estar.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''8 days'',
   true,
@@ -659,7 +659,7 @@ INSERT INTO blog_posts (
 <p>Seja esse profissional.</p>
 
 <p><strong>Pronto para desenvolver alta performance sustentável?</strong> O Método FOCCO oferece acompanhamento personalizado para profissionais que buscam destaque sem perder sua essência.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''9 days'',
   true,
@@ -1018,7 +1018,7 @@ INSERT INTO blog_posts (
 <p>Comece hoje.</p>
 
 <p><strong>Pronto para investir no ativo mais importante - você mesmo?</strong> O Método FOCCO oferece estrutura completa para transformação sustentável de estilo de vida e conquista de bem-estar duradouro.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''10 days'',
   true,

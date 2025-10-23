@@ -247,7 +247,7 @@ INSERT INTO blog_posts (
 <p>A vida é longa. Não há pressa para fazer tudo em 30 dias. Há pressa, sim, para começar - mas de forma consciente, estruturada e sustentável.</p>
 
 <p><strong>Pronto para fazer sua transição de carreira de forma estratégica e saudável?</strong> O Método FOCCO oferece acompanhamento personalizado para profissionais que buscam mudança de carreira com qualidade de vida e resultados sustentáveis.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''4 days'',
   true,
@@ -471,7 +471,7 @@ INSERT INTO blog_posts (
 <p>Transformação sustentável é feita de pequenas escolhas consistentes.</p>
 
 <p><strong>Pronto para construir uma vida com menos estresse e mais bem-estar?</strong> O Método FOCCO oferece acompanhamento personalizado para desenvolver resiliência e qualidade de vida duradouras.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL ''5 days'',
   true,

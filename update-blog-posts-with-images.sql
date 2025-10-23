@@ -4,7 +4,7 @@
 -- ==================================================
 
 -- Descomente as linhas abaixo se quiser deletar e recomeçar:
--- DELETE FROM blog_posts WHERE author = 'Valéria Arcanjo';
+-- DELETE FROM blog_posts WHERE author = 'Valéria Dias';
 -- Depois execute o blog-posts-complete.sql normalmente
 
 -- ==================================================
@@ -68,7 +68,7 @@ SELECT
   COUNT(*) as total_artigos,
   COUNT(cover_image) as artigos_com_imagem
 FROM blog_posts
-WHERE author = 'Valéria Arcanjo';
+WHERE author = 'Valéria Dias';
 
 -- Ver todos os artigos com suas imagens
 SELECT
@@ -77,5 +77,5 @@ SELECT
   cover_image,
   is_published
 FROM blog_posts
-WHERE author = 'Valéria Arcanjo'
+WHERE author = 'Valéria Dias'
 ORDER BY published_at DESC;

@@ -112,7 +112,7 @@ INSERT INTO blog_posts (
 <p>Lembre-se: o objetivo não é nunca procrastinar, mas reduzir a frequência e impacto da procrastinação na sua vida. Pequenos passos consistentes criam grandes transformações.</p>
 
 <p><strong>Pronto para parar de procrastinar e começar a agir?</strong> O Método FOCCO pode te ajudar a desenvolver as habilidades e mindset necessários para ação consistente.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '1 day',
   true,
@@ -265,7 +265,7 @@ INSERT INTO blog_posts (
 <p>Quando você aprende a dizer não ao que não serve, está dizendo sim ao que realmente importa: seus objetivos, sua saúde, seus relacionamentos genuínos e, principalmente, a você mesmo.</p>
 
 <p><strong>Pronto para desenvolver essa habilidade transformadora?</strong> O Método FOCCO oferece suporte personalizado para estabelecer limites saudáveis e construir uma vida mais equilibrada e autêntica.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '2 days',
   true,
@@ -468,7 +468,7 @@ INSERT INTO blog_posts (
 <p>A pergunta não é se vale a pena respirar conscientemente, mas sim: por que você ainda não começou?</p>
 
 <p><strong>Quer aprender a integrar respiração consciente e mindfulness na sua vida de forma estruturada?</strong> O Método FOCCO oferece práticas guiadas e personalizadas para transformar sua relação com estresse, ansiedade e bem-estar.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '3 days',
   true,
@@ -727,7 +727,7 @@ INSERT INTO blog_posts (
 <p>A vida é longa. Não há pressa para fazer tudo em 30 dias. Há pressa, sim, para começar - mas de forma consciente, estruturada e sustentável.</p>
 
 <p><strong>Pronto para fazer sua transição de carreira de forma estratégica e saudável?</strong> O Método FOCCO oferece acompanhamento personalizado para profissionais que buscam mudança de carreira com qualidade de vida e resultados sustentáveis.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '4 days',
   true,
@@ -951,7 +951,7 @@ INSERT INTO blog_posts (
 <p>Transformação sustentável é feita de pequenas escolhas consistentes.</p>
 
 <p><strong>Pronto para construir uma vida com menos estresse e mais bem-estar?</strong> O Método FOCCO oferece acompanhamento personalizado para desenvolver resiliência e qualidade de vida duradouras.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '5 days',
   true,
@@ -1251,7 +1251,7 @@ INSERT INTO blog_posts (
 <p>E pode ser a habilidade mais transformadora que você desenvolve na vida.</p>
 
 <p><strong>Pronto para desenvolver equilíbrio emocional duradouro?</strong> O Método FOCCO oferece práticas estruturadas e acompanhamento personalizado para fortalecer sua regulação emocional e bem-estar.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '6 days',
   true,
@@ -1542,7 +1542,7 @@ INSERT INTO blog_posts (
 <p>E que construir resiliência, comunidade e significado não é auto-indulgência - é resistência.</p>
 
 <p><strong>Pronto para desenvolver ferramentas reais contra ansiedade?</strong> O Método FOCCO oferece abordagem estruturada para reduzir ansiedade e construir bem-estar sustentável no mundo moderno.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '7 days',
   true,
@@ -1891,7 +1891,7 @@ INSERT INTO blog_posts (
 <p>Seu trabalho estará te esperando. E você voltará melhor.</p>
 
 <p><strong>Pronto para redesenhar sua rotina incluindo pausas estratégicas?</strong> O Método FOCCO te ajuda a construir produtividade sustentável com qualidade de vida e bem-estar.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '8 days',
   true,
@@ -2213,7 +2213,7 @@ INSERT INTO blog_posts (
 <p>Seja esse profissional.</p>
 
 <p><strong>Pronto para desenvolver alta performance sustentável?</strong> O Método FOCCO oferece acompanhamento personalizado para profissionais que buscam destaque sem perder sua essência.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '9 days',
   true,
@@ -2572,7 +2572,7 @@ INSERT INTO blog_posts (
 <p>Comece hoje.</p>
 
 <p><strong>Pronto para investir no ativo mais importante - você mesmo?</strong> O Método FOCCO oferece estrutura completa para transformação sustentável de estilo de vida e conquista de bem-estar duradouro.</p>',
-  'Valéria Arcanjo',
+  'Valéria Dias',
   '/assets/valeria-foto-optimized.png',
   NOW() - INTERVAL '10 days',
   true,

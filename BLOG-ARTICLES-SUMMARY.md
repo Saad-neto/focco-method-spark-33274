@@ -193,7 +193,7 @@ INSERT INTO blog_posts (
   slug,               -- URL amigável
   excerpt,            -- Resumo de 1-2 frases
   content,            -- HTML completo do artigo
-  author,             -- 'Valéria Arcanjo'
+  author,             -- 'Valéria Dias'
   author_avatar,      -- '/assets/valeria-foto-optimized.png'
   published_at,       -- Data escalonada (últimos 10 dias)
   is_published,       -- true
@@ -233,7 +233,7 @@ INSERT INTO blog_posts (
 Após executar o SQL, confirme:
 
 - [ ] 10 artigos foram inseridos
-- [ ] Autor de todos é "Valéria Arcanjo"
+- [ ] Autor de todos é "Valéria Dias"
 - [ ] Avatar aponta para `/assets/valeria-foto-optimized.png`
 - [ ] Datas estão escalonadas (últimos 10 dias)
 - [ ] Todos estão publicados (`is_published = true`)

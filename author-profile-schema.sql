@@ -46,7 +46,7 @@ CREATE TRIGGER update_author_profile_updated_at
 -- Inserir perfil inicial da Valéria
 INSERT INTO author_profile (name, bio, avatar_url, email, instagram, whatsapp)
 VALUES (
-  'Valéria Arcanjo',
+  'Valéria Dias',
   'Coach de Vida e Desenvolvimento Pessoal. Criadora do Método FOCCO, uma abordagem transformadora que ajuda profissionais a encontrarem clareza, propósito e equilíbrio em suas vidas.',
   '/assets/valeria-foto-optimized.png',
   'contato@focconavida.com.br',
