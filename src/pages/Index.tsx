@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import GoogleReviews from '@/components/GoogleReviews';
 import heroImage from '@/assets/hero-bg.jpg';
 import beneficiosImage from '@/assets/beneficios-focco.jpg';
+import videoMobile from '@/assets/video-mobile.mp4';
 import { useState } from 'react';
 
 const Index = () => {
@@ -137,6 +138,68 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
+      {/* Vídeo Section - Mobile/Tablet Only */}
+      <section className="section-padding bg-gradient-to-b from-background via-secondary/20 to-background lg:hidden">
+        <div className="container-custom">
+          <div className="max-w-2xl mx-auto">
+            {/* Título com animação */}
+            <div className="text-center mb-8 animate-slide-up">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl mb-4 shadow-lg">
+                <i className="fas fa-play text-2xl text-primary-foreground"></i>
+              </div>
+              <h2 className="font-heading text-3xl md:text-4xl mb-4">
+                Conheça o Método FOCCO
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Assista ao vídeo e descubra como o Método FOCCO pode transformar sua vida pessoal e profissional
+              </p>
+            </div>
+
+            {/* Container do Vídeo */}
+            <div className="relative animate-fade-in" style={{ animationDelay: '200ms' }}>
+              {/* Decoração de fundo */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-50"></div>
+
+              {/* Player de Vídeo */}
+              <div className="relative bg-card rounded-2xl shadow-2xl overflow-hidden border-2 border-primary/10">
+                <video
+                  className="w-full h-auto"
+                  controls
+                  preload="metadata"
+                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600'%3E%3Crect fill='%232C5F6F' width='400' height='600'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EConheça o Método FOCCO%3C/text%3E%3C/svg%3E"
+                  playsInline
+                >
+                  <source src={videoMobile} type="video/mp4" />
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+
+                {/* Overlay decorativo (só aparece antes de clicar play) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent pointer-events-none opacity-0 hover:opacity-100 transition-opacity"></div>
+              </div>
+
+              {/* Badge "Novidade" */}
+              <div className="absolute -top-3 -right-3 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
+                <i className="fas fa-star mr-1"></i>
+                Novo
+              </div>
+            </div>
+
+            {/* Call to Action abaixo do vídeo */}
+            <div className="mt-8 text-center">
+              <p className="text-muted-foreground mb-4">
+                Pronto para começar sua jornada de transformação?
+              </p>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button className="btn-accent text-lg px-8 py-6">
+                  <i className="fab fa-whatsapp mr-3"></i>
+                  Agendar Primeira Sessão
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pilares FOCCO Section - Tabs Interativas */}
       <section className="section-padding bg-gradient-to-b from-background to-muted">
         <div className="container-custom">
@@ -148,24 +211,24 @@ const Index = () => {
           </div>
 
           {/* Tabs Navigation */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-nowrap justify-center gap-2 md:gap-3 mb-12 overflow-x-auto pb-2 scrollbar-hide">
             {pilaresFocco.map((pilar, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`group relative px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                className={`group relative px-4 md:px-6 py-3 md:py-4 rounded-xl font-semibold transition-all duration-300 flex-shrink-0 ${
                   activeTab === index
                     ? 'bg-gradient-to-r ' + pilar.color + ' text-primary-foreground shadow-lg scale-105'
                     : 'bg-card hover:bg-card/80 text-foreground hover:scale-105'
                 }`}
               >
-                <div className="flex items-center gap-3">
-                  <span className={`text-3xl font-bold font-heading ${
+                <div className="flex items-center gap-2 md:gap-3">
+                  <span className={`text-2xl md:text-3xl font-bold font-heading ${
                     activeTab === index ? 'text-primary-foreground' : 'text-primary'
                   }`}>
                     {pilar.letter}
                   </span>
-                  <div className="text-left hidden sm:block">
+                  <div className="text-left hidden md:block">
                     <div className={`text-sm font-semibold ${
                       activeTab === index ? 'text-primary-foreground' : 'text-foreground'
                     }`}>
