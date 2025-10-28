@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GoogleMapsLocation from '@/components/GoogleMapsLocation';
 
 const Contato = () => {
   const whatsappNumber = '5583993787450';
@@ -154,6 +155,9 @@ const Contato = () => {
           </div>
         </div>
       </section>
+
+      {/* Localização Google Maps */}
+      <GoogleMapsLocation />
 
       {/* Sessão Gratuita Highlight */}
       <section className="section-padding bg-gradient-to-br from-accent/10 via-primary/5 to-background">
