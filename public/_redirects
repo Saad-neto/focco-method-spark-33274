@@ -1,21 +1,2 @@
-# Cloudflare Pages - SPA Redirect Rules
-# Redireciona todas as rotas para index.html (React Router)
-
-# Landing Pages
-/agendamento-a /index.html 200
-/agendamento-b /index.html 200
-/agendamento-c /index.html 200
-/agendamento-d /index.html 200
-
-# Outras páginas
-/sobre /index.html 200
-/servicos /index.html 200
-/contato /index.html 200
-/blog /index.html 200
-/blog/* /index.html 200
-/dashboard /index.html 200
-/dashboard/* /index.html 200
-/login /index.html 200
-
-# Catch-all: todas as outras rotas também vão para index.html
+# Cloudflare Pages SPA Redirects
 /* /index.html 200
