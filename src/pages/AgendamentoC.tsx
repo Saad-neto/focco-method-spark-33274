@@ -37,7 +37,9 @@ const AgendamentoC = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <HeroSection
+      {/* Main Content - padding-top para não ficar atrás do header fixo */}
+      <div className="pt-24 md:pt-32">
+        <HeroSection
         variant="empreendedor"
         headline="Trabalha 12 horas por dia, mas seu negócio não sai do lugar?"
         subheadline="Saia do caos operacional, ganhe foco estratégico e cresça seu negócio sem sacrificar sua vida pessoal"
@@ -135,6 +137,7 @@ const AgendamentoC = () => {
         whatsappNumber={whatsappNumber}
         variant="c"
       />
+      </div>
 
       <Footer />
     </div>

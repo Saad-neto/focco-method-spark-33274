@@ -37,7 +37,9 @@ const AgendamentoD = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <HeroSection
+      {/* Main Content - padding-top para não ficar atrás do header fixo */}
+      <div className="pt-24 md:pt-32">
+        <HeroSection
         variant="proposito"
         headline="Você tem tudo na vida, mas sente que falta algo?"
         subheadline="Descubra seu propósito autêntico, quebre padrões limitantes e viva com plenitude e significado"
@@ -136,6 +138,7 @@ const AgendamentoD = () => {
         variant="d"
         urgencia={true}
       />
+      </div>
 
       <Footer />
     </div>

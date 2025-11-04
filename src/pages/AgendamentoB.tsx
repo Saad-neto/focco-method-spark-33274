@@ -37,7 +37,9 @@ const AgendamentoB = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <HeroSection
+      {/* Main Content - padding-top para não ficar atrás do header fixo */}
+      <div className="pt-24 md:pt-32">
+        <HeroSection
         variant="transicao"
         headline="Preso em uma carreira que não te realiza mais?"
         subheadline="Descubra seu verdadeiro propósito e tenha clareza para fazer a transição certa, sem medo de se arrepender"
@@ -135,6 +137,7 @@ const AgendamentoB = () => {
         whatsappNumber={whatsappNumber}
         variant="b"
       />
+      </div>
 
       <Footer />
     </div>

@@ -41,8 +41,10 @@ const AgendamentoA = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* HERO SECTION */}
-      <HeroSection
+      {/* Main Content - padding-top para não ficar atrás do header fixo */}
+      <div className="pt-24 md:pt-32">
+        {/* HERO SECTION */}
+        <HeroSection
         variant="executiva"
         headline="Você conquistou tudo na carreira, mas perdeu a si mesma no caminho?"
         subheadline="Recupere seu equilíbrio, saúde mental e qualidade de vida sem abrir mão do seu sucesso profissional"
@@ -145,6 +147,7 @@ const AgendamentoA = () => {
         whatsappNumber={whatsappNumber}
         variant="a"
       />
+      </div>
 
       <Footer />
     </div>
