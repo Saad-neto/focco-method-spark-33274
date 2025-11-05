@@ -54,7 +54,7 @@ export const HeroSection = ({
 
   return (
     <section className={`relative min-h-[85vh] flex items-center justify-center bg-gradient-to-br ${config.gradient} pt-32 pb-16`}>
-      <div className="container-custom px-4">
+      <div className="container-custom px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="max-w-4xl mx-auto text-center space-y-8 text-white animate-fade-in">
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
