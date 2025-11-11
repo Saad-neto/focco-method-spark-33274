@@ -51,8 +51,10 @@ export const trackWhatsAppClick = (landingPage: string, localizacao: string) => 
 /**
  * Rastreia conversão no Google Ads
  * Configurar as variáveis de ambiente:
- * VITE_GOOGLE_ADS_ID=AW-123456789
- * VITE_GOOGLE_ADS_LABEL=abCD1234efGH
+ * VITE_GOOGLE_ADS_ID=AW-17719962115
+ * VITE_GOOGLE_ADS_LABEL=4XajCPTM5b0bEIPUxIFC
+ *
+ * Dispara quando usuário clica em botão de WhatsApp
  */
 export const trackGoogleAdsConversion = () => {
   const adsId = import.meta.env.VITE_GOOGLE_ADS_ID;
@@ -61,10 +63,12 @@ export const trackGoogleAdsConversion = () => {
   if (typeof window !== 'undefined' && window.gtag && adsId && adsLabel) {
     window.gtag('event', 'conversion', {
       'send_to': `${adsId}/${adsLabel}`,
-      'value': 1.0,
+      'value': 50.0,
       'currency': 'BRL'
     });
-    console.log('🎯 Google Ads Conversion tracked!');
+    console.log('🎯 Google Ads Conversion tracked! Value: R$ 50.00');
+  } else {
+    console.warn('⚠️ Google Ads conversion not tracked - missing ID or Label');
   }
 };
 
