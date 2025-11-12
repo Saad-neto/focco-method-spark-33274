@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import DashboardPosts from "./pages/DashboardPosts";
 import DashboardPostForm from "./pages/DashboardPostForm";
 import DashboardAuthorProfile from "./pages/DashboardAuthorProfile";
+import DebugAnalytics from "./pages/DebugAnalytics";
 import NotFound from "./pages/NotFound";
 
 // Landing Pages Google Ads
@@ -59,6 +60,7 @@ const App = () => (
           {/* Dashboard Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/debug" element={<DebugAnalytics />} />
           <Route path="/dashboard/posts" element={<DashboardPosts />} />
           <Route path="/dashboard/posts/new" element={<DashboardPostForm />} />
           <Route path="/dashboard/posts/:postId/edit" element={<DashboardPostForm />} />
