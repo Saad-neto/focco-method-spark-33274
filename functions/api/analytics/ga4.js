@@ -43,7 +43,16 @@ export const onRequest = async (context) => {
       throw new Error('Missing GA4 configuration');
     }
 
-    const credentials = JSON.parse(credentialsJson);
+    // Parse JSON com tratamento de erro mais robusto
+    let credentials;
+    try {
+      // Se o JSON já for um objeto, usar diretamente
+      credentials = typeof credentialsJson === 'string'
+        ? JSON.parse(credentialsJson)
+        : credentialsJson;
+    } catch (parseError) {
+      throw new Error(`Failed to parse credentials: ${parseError.message}`);
+    }
 
     // Obter access token do Google
     const accessToken = await getGoogleAccessToken(
