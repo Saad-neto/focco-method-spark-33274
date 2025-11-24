@@ -3,7 +3,7 @@
   <!-- Páginas Principais -->
   <url>
     <loc>https://focconavida.com.br/</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -33,12 +33,54 @@
   </url>
   <url>
     <loc>https://focconavida.com.br/blog</loc>
-    <lastmod>2025-11-16</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Artigos do Blog (24 artigos) -->
+  <!-- Artigos do Blog (27 artigos - Atualizado em 24/11/2025) -->
+
+  <!-- NOVOS POSTS - 24/11/2025 -->
+  <url>
+    <loc>https://focconavida.com.br/blog/voce-vive-no-automatico</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://focconavida.com.br/blog/sera-que-consigo-focar-no-que-preciso</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://focconavida.com.br/blog/4-dicas-potencializar-desenvolvimento-profissional-saudavel</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- POSTS ATUALIZADOS COM IMAGENS - 24/11/2025 -->
+  <url>
+    <loc>https://focconavida.com.br/blog/desenvolver-habilidades-profissional-sucesso-sem-adoecer</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://focconavida.com.br/blog/se-voce-reclama-continua-igual-nada-muda</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://focconavida.com.br/blog/comunicacao-assertiva-carreira-sucesso</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- POSTS ANTERIORES -->
   <url>
     <loc>https://focconavida.com.br/blog/transicao-de-carreira-com-qualidade</loc>
     <lastmod>2025-11-04</lastmod>
@@ -96,12 +138,6 @@
   <url>
     <loc>https://focconavida.com.br/blog/importancia-autoconhecimento-jornada-profissional</loc>
     <lastmod>2025-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://focconavida.com.br/blog/desenvolver-habilidades-profissional-sucesso-sem-adoecer</loc>
-    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -168,18 +204,6 @@
   <url>
     <loc>https://focconavida.com.br/blog/energia-mental-limite-esgotando-errado</loc>
     <lastmod>2025-11-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://focconavida.com.br/blog/comunicacao-assertiva-carreira-sucesso</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://focconavida.com.br/blog/se-voce-reclama-continua-igual-nada-muda</loc>
-    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
