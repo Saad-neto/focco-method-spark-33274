@@ -5,7 +5,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
 
 interface FormularioSectionProps {
@@ -18,9 +17,7 @@ interface FormularioSectionProps {
 export const FormularioSection = ({ titulo, subtitulo, ctaText, variant }: FormularioSectionProps) => {
   const [formData, setFormData] = useState({
     nome: '',
-    email: '',
     whatsapp: '',
-    mensagem: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -43,12 +40,12 @@ export const FormularioSection = ({ titulo, subtitulo, ctaText, variant }: Formu
       setSubmitStatus('success');
 
       // Redirecionar para WhatsApp após sucesso
-      const whatsappMessage = `Olá! Preenchi o formulário na página ${variant.toUpperCase()}. Meu nome é ${formData.nome}.`;
+      const whatsappMessage = `Olá! Estou passando por burnout/ansiedade e preciso de ajuda. Preenchi o formulário no site. Meu nome é ${formData.nome} e meu WhatsApp é ${formData.whatsapp}.`;
       const whatsappLink = `https://wa.me/5583993787450?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappLink, '_blank');
 
       // Resetar form
-      setFormData({ nome: '', email: '', whatsapp: '', mensagem: '' });
+      setFormData({ nome: '', whatsapp: '' });
       setTimeout(() => setSubmitStatus('idle'), 3000);
     }, 1500);
   };
@@ -84,33 +81,12 @@ export const FormularioSection = ({ titulo, subtitulo, ctaText, variant }: Formu
 
             <div>
               <Input
-                type="email"
-                placeholder="Seu melhor e-mail *"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="text-lg py-6"
-              />
-            </div>
-
-            <div>
-              <Input
                 type="tel"
                 placeholder="WhatsApp (com DDD) *"
                 value={formData.whatsapp}
                 onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                 required
                 className="text-lg py-6"
-              />
-            </div>
-
-            <div>
-              <Textarea
-                placeholder="Conte um pouco sobre sua situação atual... (opcional)"
-                value={formData.mensagem}
-                onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
-                rows={4}
-                className="text-lg"
               />
             </div>
 

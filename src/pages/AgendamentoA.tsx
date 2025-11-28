@@ -46,7 +46,7 @@ const AgendamentoA = () => {
         {/* HERO SECTION */}
         <HeroSection
         variant="executiva"
-        headline="Você conquistou tudo na carreira, mas perdeu a si mesma no caminho?"
+        headline="Você conquistou tudo na carreira, mas perdeu o equilíbrio no caminho?"
         subheadline="Recupere seu equilíbrio, saúde mental e qualidade de vida sem abrir mão do seu sucesso profissional"
         ctaPrimary={{
           text: 'Quero ter equilíbrio SEM perder meu sucesso',
@@ -55,9 +55,9 @@ const AgendamentoA = () => {
         ctaSecondary={{
           text: 'Falar no WhatsApp',
           icon: '💬',
-          href: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Vi a página para Executivas e gostaria de agendar uma sessão.')}`,
+          href: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Estou passando por burnout/ansiedade no trabalho e preciso de ajuda. Vi seu anúncio no Google e quero agendar minha sessão diagnóstica gratuita.')}`,
         }}
-        proofText="⭐ Mais de 200 executivas recuperaram o equilíbrio e a saúde mental"
+        proofText="⭐ Mais de 200 profissionais recuperaram o equilíbrio e a saúde mental"
         onCtaPrimaryClick={scrollToForm}
       />
 
@@ -107,8 +107,8 @@ const AgendamentoA = () => {
 
       {/* DEPOIMENTOS SECTION */}
       <DepoimentosSection
-        titulo="Executivas que já se transformaram"
-        subtitulo="Veja o que outras profissionais como você alcançaram:"
+        titulo="Profissionais que já se transformaram"
+        subtitulo="Veja o que outras pessoas como você alcançaram:"
         depoimentos={[
           {
             nome: 'Paula Andrade',
@@ -143,7 +143,7 @@ const AgendamentoA = () => {
       <CTAWhatsAppSection
         headline="Prefere falar direto no WhatsApp?"
         subheadline="Entre em contato agora e tire suas dúvidas sobre o Método FOCCO"
-        whatsappMessage="Olá! Vi a página para Executivas em Burnout e gostaria de saber mais sobre como o Método FOCCO pode me ajudar a recuperar o equilíbrio sem perder meu sucesso profissional."
+        whatsappMessage="Olá! Estou em burnout/ansiedade e preciso recuperar meu equilíbrio. Vi seu anúncio e quero saber como o Método FOCCO pode me ajudar sem perder meu sucesso profissional."
         whatsappNumber={whatsappNumber}
         variant="a"
       />
