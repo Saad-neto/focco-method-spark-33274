@@ -1,307 +1,313 @@
-# 🚀 Guia de Deploy - Método FOCCO
+# 🚀 Guia Completo de Deploy - Método FOCCO
 
-## Hospedagem Gratuita com Cloudflare Pages + Domínio Registro.br
+## ✅ Configuração Atual (Dezembro 2025)
 
----
+**Site em Produção:**
+- 🌐 https://focconavida.com.br
+- 🌐 https://www.focconavida.com.br
+- 🌐 https://focco-method-spark-33274-1k8.pages.dev (URL temporária)
 
-## 📦 Passo 1: Preparar o Repositório GitHub
-
-### 1.1. Fazer commit das alterações
-```bash
-cd /root/projetos/focco/focco-method-spark-33274
-
-# Adicionar todas as alterações
-git add .
-
-# Criar commit
-git commit -m "Finalização do projeto para entrega ao cliente
-
-- Atualização de informações de contato
-- Redesign da página de contato com CTA WhatsApp
-- Atualização de todos os CTAs para WhatsApp
-- Correção da página 404
-- Melhorias de código e lint"
-
-# Enviar para GitHub
-git push origin main
-```
-
-### 1.2. Se ainda não estiver no GitHub
-```bash
-# Já está no GitHub em: https://github.com/Saad-neto/focco-method-spark-33274
-# Basta fazer o push conforme acima
-```
-
----
-
-## ☁️ Passo 2: Deploy no Cloudflare Pages
-
-### 2.1. Criar conta no Cloudflare
-1. Acesse: https://dash.cloudflare.com/sign-up
-2. Crie uma conta gratuita
-3. Confirme seu email
-
-### 2.2. Configurar Cloudflare Pages
-1. No painel do Cloudflare, vá em **Workers & Pages**
-2. Clique em **Create Application**
-3. Selecione **Pages** → **Connect to Git**
-4. Conecte sua conta do GitHub
-5. Selecione o repositório: `focco-method-spark-33274`
-6. Configure o build:
-
-```
-Framework preset: Vite
-Build command: npm run build
-Build output directory: dist
-Root directory: (deixe vazio)
-Environment variables: (nenhuma necessária)
-```
-
-7. Clique em **Save and Deploy**
-
-⏱️ **Aguarde 2-5 minutos** - O Cloudflare vai fazer o build e deploy automático
-
-### 2.3. Verificar Deploy
-Após o deploy, você receberá um URL temporário:
-```
-https://focco-method-spark-33274.pages.dev
-```
-
-Teste o site neste URL antes de conectar o domínio!
-
----
-
-## 🌐 Passo 3: Configurar Domínio no Registro.br
-
-### 3.1. Adicionar Domínio ao Cloudflare Pages
-
-1. No painel do Cloudflare Pages, vá até seu projeto
-2. Clique em **Custom Domains**
-3. Clique em **Set up a custom domain**
-4. Digite seu domínio (exemplo: `metodofocco.com.br`)
-5. Clique em **Continue**
-
-O Cloudflare vai fornecer os registros DNS necessários.
-
-### 3.2. Configurar DNS no Registro.br
-
-#### Opção A: Usando Nameservers do Cloudflare (RECOMENDADO)
-
-**Vantagens:**
-- SSL automático
-- CDN gratuito
-- Proteção DDoS
-- Dashboard unificado
-
-**Passos:**
-
-1. **No Cloudflare**, adicione seu domínio:
-   - Vá em **Websites** → **Add a Site**
-   - Digite seu domínio: `seudominio.com.br`
-   - Escolha o plano **Free**
-   - O Cloudflare vai escanear seus DNS atuais
-
-2. **Cloudflare vai fornecer 2 nameservers**, algo como:
-   ```
-   aisha.ns.cloudflare.com
-   dolf.ns.cloudflare.com
-   ```
-
-3. **No Registro.br**, altere os nameservers:
-   - Acesse: https://registro.br
-   - Faça login com sua conta
-   - Vá em **Meus Domínios**
-   - Clique no domínio desejado
-   - Vá em **Servidores DNS**
-   - Selecione **Usar servidores DNS externos**
-   - Adicione os 2 nameservers do Cloudflare
-   - Clique em **Salvar**
-
-4. **Volte ao Cloudflare** e clique em **Done, check nameservers**
-
-⏱️ **Propagação DNS**: 2-48 horas (geralmente 2-6 horas)
-
----
-
-#### Opção B: Usando DNS do Registro.br (Mais Simples)
-
-**Se preferir manter os DNS no Registro.br:**
-
-1. **No Cloudflare Pages**, ao adicionar o domínio, você verá os registros necessários
-
-2. **Registros DNS para adicionar no Registro.br:**
-
-```
-Tipo: CNAME
-Nome: @  (ou deixe vazio)
-Destino: focco-method-spark-33274.pages.dev
-TTL: 3600
-
-Tipo: CNAME
-Nome: www
-Destino: focco-method-spark-33274.pages.dev
-TTL: 3600
-```
-
-**IMPORTANTE:** O Registro.br NÃO permite CNAME no domínio raiz (@).
-**Solução:** Use registros A apontando para os IPs do Cloudflare:
-
-```
-Tipo: A
-Nome: @
-Endereço IPv4: (IPs fornecidos pelo Cloudflare)
-TTL: 3600
-```
-
-**Passos no Registro.br:**
-
-1. Acesse: https://registro.br
-2. Faça login
-3. Vá em **Meus Domínios**
-4. Clique no domínio
-5. Vá em **Editar Zona**
-6. Adicione os registros conforme acima
-7. Clique em **Salvar**
-
-⏱️ **Propagação**: 2-24 horas
-
----
-
-## ✅ Passo 4: Verificação Final
-
-### 4.1. Testar o Domínio
-Após a propagação DNS, teste:
-```bash
-# Verificar se o DNS propagou
-nslookup seudominio.com.br
-
-# Testar no navegador
-https://seudominio.com.br
-https://www.seudominio.com.br
-```
-
-### 4.2. Verificar SSL/HTTPS
-- O Cloudflare Pages gera SSL automático
-- Aguarde até 24h para o certificado ser emitido
-- Seu site deve abrir com **https://** automaticamente
-
-### 4.3. Checklist Final
-- [ ] Site carrega corretamente
-- [ ] HTTPS funcionando
-- [ ] www redireciona para domínio principal
-- [ ] Todos os CTAs do WhatsApp funcionam
-- [ ] Email (focconavida@gmail.com) está correto
-- [ ] Número do WhatsApp está correto
-- [ ] Imagens carregando
-- [ ] Design responsivo (mobile/desktop)
+**Infraestrutura:**
+- **GitHub:** [focconavida/focco-method-spark-33274](https://github.com/focconavida/focco-method-spark-33274)
+- **Deploy:** Cloudflare Pages (deploy automático)
+- **DNS:** Cloudflare (nameservers: mustafa.ns / virginia.ns)
+- **Domínio:** Registro.br (focconavida.com.br)
+- **SSL/HTTPS:** Ativo e automático via Cloudflare
+- **Custo:** R$ 0,00/mês (apenas R$ 40/ano do domínio)
 
 ---
 
 ## 🔄 Deploy Automático
 
-Com Cloudflare Pages + GitHub, todo commit que você fizer na branch `main` vai automaticamente:
+### Como Funciona
 
-1. Rodar o build
-2. Fazer deploy
-3. Atualizar o site
+Toda vez que você faz `git push` para a branch `main`, o Cloudflare Pages automaticamente:
 
-**Fluxo de trabalho:**
+1. ✅ Detecta o novo commit
+2. ✅ Clona o repositório
+3. ✅ Instala dependências (`npm install`)
+4. ✅ Executa o build (`npm run build`)
+5. ✅ Publica o site em produção
+6. ✅ Atualiza focconavida.com.br
+
+**Tempo total:** 2-5 minutos
+
+### Fazer Update no Site
+
 ```bash
-# Fazer alterações no código
+# 1. Faça suas alterações no código
+
+# 2. Commit das mudanças
 git add .
-git commit -m "Descrição das alterações"
+git commit -m "Descrição clara das alterações"
+
+# 3. Push para GitHub
 git push origin main
 
-# ⏱️ 2-5 minutos depois, site atualizado automaticamente!
+# 4. Aguarde 2-5 minutos
+# O site será atualizado automaticamente!
 ```
+
+### Acompanhar Deploy
+
+1. Acesse https://dash.cloudflare.com
+2. Vá em **Workers & Pages** → **focco-method-spark-33274**
+3. Aba **Deployments**
+4. Veja o status em tempo real
+
+---
+
+## 🏗️ Configuração Técnica
+
+### Build Settings
+
+```
+Framework preset: Vite
+Build command: npm run build
+Build output directory: dist
+Root directory: (vazio)
+Node version: 18.x
+```
+
+### Environment Variables
+
+Configuradas no Cloudflare Dashboard:
+
+```env
+VITE_SUPABASE_URL=https://vtsqvmmhgekwdwihyaax.supabase.co
+VITE_SUPABASE_ANON_KEY=[chave configurada no dashboard]
+```
+
+**Como adicionar/editar:**
+1. Dashboard → Workers & Pages → focco-method-spark-33274
+2. Settings → Environment Variables
+3. Add variable / Edit
+
+---
+
+## 🌐 Configuração DNS
+
+### Domínio Principal
+
+**Registro no Registro.br:**
+- Domínio: focconavida.com.br
+- Nameservers:
+  - `mustafa.ns.cloudflare.com`
+  - `virginia.ns.cloudflare.com`
+
+### Registros DNS no Cloudflare
+
+```
+Type: CNAME
+Name: focconavida.com.br (ou @)
+Target: focco-method-spark-33274-1k8.pages.dev
+Proxy: Proxied (laranja)
+TTL: Auto
+
+Type: CNAME
+Name: www
+Target: focconavida.com.br
+Proxy: Proxied (laranja)
+TTL: Auto
+```
+
+**Resultado:**
+- ✅ https://focconavida.com.br → Funciona
+- ✅ https://www.focconavida.com.br → Funciona
+- ✅ SSL automático
+- ✅ CDN global ativo
+
+---
+
+## 🔧 Administração
+
+### Acessos
+
+**Conta do Cliente:**
+- Email: focconavida@gmail.com
+- GitHub: https://github.com/focconavida
+- Cloudflare: https://dash.cloudflare.com
+- Registro.br: https://registro.br
+
+**Repositório:**
+- GitHub URL: https://github.com/focconavida/focco-method-spark-33274
+- Branch principal: `main`
+
+### Cloudflare Dashboard
+
+**Principais Seções:**
+- **Deployments:** Ver histórico de deploys
+- **Custom domains:** Gerenciar domínios
+- **Settings:** Configurações e variáveis de ambiente
+- **Analytics:** Métricas de acesso (se habilitado)
 
 ---
 
 ## 🆘 Troubleshooting
 
-### Problema: DNS não propagou
-**Solução:**
-```bash
-# Limpar cache DNS local
-ipconfig /flushdns  # Windows
-sudo dscacheutil -flushcache  # Mac
-sudo systemd-resolve --flush-caches  # Linux
+### Site não atualiza após commit
 
-# Testar em modo anônimo/privado do navegador
+**Verificar:**
+1. Commit foi para branch `main`?
+   ```bash
+   git branch  # Verifica branch atual
+   ```
+2. Push foi bem-sucedido?
+   ```bash
+   git push origin main
+   ```
+3. Build passou no Cloudflare?
+   - Dashboard → Deployments → Verificar status
+
+**Solução:**
+- Se build falhou: Veja os logs de erro
+- Se build passou mas site não mudou: Limpe cache do navegador (Ctrl+Shift+R)
+
+### Erro 500 ou site não carrega
+
+**Verificar:**
+1. Variáveis de ambiente configuradas?
+   - Dashboard → Settings → Environment Variables
+2. Build gerou a pasta `dist/` corretamente?
+   - Veja logs do último deployment
+
+**Solução:**
+- Retry deployment no dashboard
+- Verificar se todas as dependências estão no `package.json`
+
+### SSL/HTTPS com erro
+
+**Verificar:**
+1. Cloudflare → SSL/TLS → Overview
+2. Modo deve estar em: **Full** ou **Full (strict)**
+
+**Solução:**
+- Aguardar propagação (pode levar até 24h para novos domínios)
+- Verificar se domínio está apontando para nameservers corretos
+
+### DNS não propaga
+
+**Testar propagação:**
+```bash
+# Linux/Mac
+dig focconavida.com.br
+
+# Windows
+nslookup focconavida.com.br
 ```
 
-### Problema: SSL não funciona
-**Solução:**
-- Aguarde 24h para emissão do certificado
-- No Cloudflare, vá em SSL/TLS → Overview
-- Selecione **Full** ou **Full (strict)**
+**Verificar online:**
+- https://www.whatsmydns.net/
 
-### Problema: Site não atualiza após commit
 **Solução:**
-- Verifique o build no painel do Cloudflare Pages
-- Veja os logs de build
-- Certifique-se que o commit foi para a branch `main`
+- Aguardar (propagação pode levar 2-48h)
+- Verificar nameservers no Registro.br
+- Limpar cache DNS local:
+  ```bash
+  # Windows
+  ipconfig /flushdns
 
-### Problema: Imagens não carregam
-**Solução:**
-- Verifique se as imagens estão na pasta `src/assets/`
-- Verifique se os imports estão corretos
-- Limpe cache do navegador
+  # Mac
+  sudo dscacheutil -flushcache
+
+  # Linux
+  sudo systemd-resolve --flush-caches
+  ```
 
 ---
 
-## 📊 Monitoramento
+## 📊 Performance e Otimizações
 
-### Analytics (Opcional - Gratuito)
-Adicione Google Analytics ou Cloudflare Web Analytics:
+### Cloudflare CDN
 
-1. **Cloudflare Web Analytics** (Recomendado - sem cookies)
-   - No painel Cloudflare: **Analytics** → **Web Analytics**
-   - Copie o script
-   - Adicione no `index.html`
+O site está automaticamente otimizado com:
+- ✅ Cache global em 200+ cidades
+- ✅ Compressão Brotli/Gzip
+- ✅ Minificação automática (HTML/CSS/JS)
+- ✅ HTTP/2 e HTTP/3
+- ✅ IPv6
 
-2. **Google Analytics**
-   - Crie uma propriedade em analytics.google.com
-   - Copie o código de tracking
-   - Adicione no `index.html`
+### Build Otimizado
+
+Vite já faz automaticamente:
+- ✅ Tree-shaking (remove código não usado)
+- ✅ Code splitting
+- ✅ Minificação de JavaScript
+- ✅ Otimização de CSS
+- ✅ Compressão de assets
 
 ---
 
 ## 💰 Custos
 
-### Cloudflare Pages: **R$ 0,00/mês**
-- Build ilimitados
-- Bandwidth ilimitado
-- CDN global
-- SSL gratuito
+### Atual (Dezembro 2025)
 
-### Domínio .com.br: **~R$ 40,00/ano** (Registro.br)
-- Renovação anual
-- Menor preço do Brasil
+| Serviço | Custo |
+|---------|-------|
+| **Cloudflare Pages** | R$ 0,00/mês |
+| **Cloudflare CDN** | R$ 0,00/mês |
+| **Cloudflare SSL** | R$ 0,00/mês |
+| **GitHub** | R$ 0,00/mês |
+| **Domínio .com.br** | ~R$ 40,00/ano |
+| **TOTAL** | **~R$ 3,33/mês** |
 
-**Total: ~R$ 40/ano** (apenas o domínio!)
+### Limites do Plano Free
+
+Cloudflare Pages - Plano Free:
+- ✅ 500 builds/mês
+- ✅ Bandwidth ilimitado
+- ✅ 100 custom domains
+- ✅ 20.000 requests/dia
+- ✅ Preview deployments ilimitados
+
+**Para o site FOCCO:** Limites mais que suficientes!
 
 ---
 
-## 🎯 Resumo
+## 🎯 Checklist de Manutenção
 
-1. ✅ Código está pronto e testado
-2. ✅ Push para GitHub
-3. ✅ Deploy no Cloudflare Pages (2-5 min)
-4. ✅ Configurar domínio no Registro.br (2-24h propagação)
-5. ✅ Testar site no domínio final
-6. ✅ **Entregar ao cliente!** 🎉
+### Semanal
+- [ ] Verificar se site está acessível
+- [ ] Testar formulários de contato
+- [ ] Verificar links do WhatsApp
+
+### Mensal
+- [ ] Revisar analytics (se configurado)
+- [ ] Verificar tempo de carregamento
+- [ ] Testar em diferentes dispositivos
+
+### Anual
+- [ ] Renovar domínio no Registro.br
+- [ ] Revisar e atualizar conteúdo
+- [ ] Atualizar dependências (`npm update`)
 
 ---
 
 ## 📞 Links Úteis
 
-- Cloudflare Pages: https://pages.cloudflare.com/
-- Registro.br: https://registro.br
-- Documentação Cloudflare: https://developers.cloudflare.com/pages/
-- Status DNS: https://www.whatsmydns.net/
+- **Site:** https://focconavida.com.br
+- **GitHub Repo:** https://github.com/focconavida/focco-method-spark-33274
+- **Cloudflare Dashboard:** https://dash.cloudflare.com
+- **Registro.br:** https://registro.br
+- **Status DNS:** https://www.whatsmydns.net/
+- **Docs Cloudflare Pages:** https://developers.cloudflare.com/pages/
 
 ---
 
-**Dúvidas? Problemas?**
-Consulte a documentação oficial ou entre em contato com o suporte do Cloudflare (muito eficiente!).
+## 🤝 Suporte
+
+**Problemas técnicos:**
+1. Verifique este guia primeiro
+2. Consulte documentação do Cloudflare
+3. Veja logs de deployment no dashboard
+
+**Alterações no site:**
+1. Faça commit das mudanças
+2. Push para GitHub
+3. Aguarde deploy automático
+
+---
+
+**Última atualização:** Dezembro 2025
+**Status:** ✅ Produção - 100% Funcional
+**Desenvolvido com:** Claude Code 🤖
