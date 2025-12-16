@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import valeriaDias from '@/assets/valeria-dias.png';
 
-// Página Bio - Link in Bio para Instagram - Otimizada para conversão
+// Página Bio - Link in Bio para Instagram - Repositório transferido para conta focconavida
 const Bio = () => {
   const whatsappNumber = '5583993787450';
   const whatsappMessage = 'Olá! Vim do Instagram e gostaria de agendar uma sessão.';
