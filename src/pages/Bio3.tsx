@@ -43,7 +43,7 @@ const Bio3 = () => {
                 <img
                   src={valeriaDias}
                   alt="Valéria Dias"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-150 object-center"
                 />
               </div>
 

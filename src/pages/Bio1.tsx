@@ -35,7 +35,7 @@ const Bio1 = () => {
                 <img
                   src={valeriaDias}
                   alt="Valéria Dias"
-                  className="w-full h-full object-cover object-[center_35%]"
+                  className="w-full h-full object-cover scale-150 object-center"
                 />
               </div>
 
