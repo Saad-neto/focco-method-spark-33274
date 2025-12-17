@@ -5,14 +5,11 @@ import Footer from '@/components/Footer';
 import GoogleReviews from '@/components/GoogleReviews';
 import heroImage from '@/assets/hero-bg.jpg';
 import beneficiosImage from '@/assets/beneficios-focco.jpg';
-import { useState } from 'react';
 
 const Index = () => {
   const whatsappNumber = '5583993787450';
   const whatsappMessage = 'Olá, seja bem-vindo! Como posso te ajudar?';
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-  const [activeTab, setActiveTab] = useState(0);
 
   const pilaresFocco = [
     {
@@ -137,7 +134,7 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      {/* Pilares FOCCO Section - Tabs Interativas */}
+      {/* Pilares FOCCO Section - Cards Verticais */}
       <section className="section-padding bg-gradient-to-b from-background to-muted">
         <div className="container-custom">
           <div className="text-center mb-16 animate-slide-up">
@@ -147,97 +144,41 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Tabs Navigation */}
-          <div className="flex flex-nowrap justify-center gap-2 md:gap-3 mb-12 overflow-x-auto pb-2 scrollbar-hide">
-            {pilaresFocco.map((pilar, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`group relative px-4 md:px-6 py-3 md:py-4 rounded-xl font-semibold transition-all duration-300 flex-shrink-0 ${
-                  activeTab === index
-                    ? 'bg-gradient-to-r ' + pilar.color + ' text-primary-foreground shadow-lg scale-105'
-                    : 'bg-card hover:bg-card/80 text-foreground hover:scale-105'
-                }`}
-              >
-                <div className="flex items-center gap-2 md:gap-3">
-                  <span className={`text-2xl md:text-3xl font-bold font-heading ${
-                    activeTab === index ? 'text-primary-foreground' : 'text-primary'
-                  }`}>
-                    {pilar.letter}
-                  </span>
-                  <div className="text-left hidden md:block">
-                    <div className={`text-sm font-semibold ${
-                      activeTab === index ? 'text-primary-foreground' : 'text-foreground'
-                    }`}>
-                      {pilar.title}
-                    </div>
-                    <div className={`text-xs ${
-                      activeTab === index ? 'text-primary-foreground/80' : 'text-muted-foreground'
-                    }`}>
-                      {pilar.subtitle}
-                    </div>
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <div className="relative">
+          {/* Cards Verticais - Scroll Natural */}
+          <div className="space-y-6 max-w-5xl mx-auto">
             {pilaresFocco.map((pilar, index) => (
               <div
                 key={index}
-                className={`transition-all duration-500 ${
-                  activeTab === index
-                    ? 'opacity-100 scale-100 relative'
-                    : 'opacity-0 scale-95 absolute inset-0 pointer-events-none'
-                }`}
+                className={`card-elevated p-8 md:p-12 bg-gradient-to-br ${pilar.color} text-primary-foreground animate-slide-up`}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`card-elevated p-8 md:p-12 bg-gradient-to-br ${pilar.color} text-primary-foreground`}>
-                  <div className="grid md:grid-cols-[auto,1fr] gap-8 items-center">
-                    {/* Ícone e Letra */}
-                    <div className="flex flex-col items-center">
-                      <div className="w-32 h-32 bg-primary-foreground/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mb-4 shadow-xl">
-                        <i className={`fas ${pilar.icon} text-6xl text-primary-foreground`}></i>
-                      </div>
-                      <div className="text-7xl font-bold font-heading text-primary-foreground/30">
-                        {pilar.letter}
-                      </div>
+                <div className="grid md:grid-cols-[auto,1fr] gap-8 items-center">
+                  {/* Ícone e Letra */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-24 h-24 bg-primary-foreground/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mb-4 shadow-xl">
+                      <i className={`fas ${pilar.icon} text-5xl text-primary-foreground`}></i>
                     </div>
+                    <div className="text-6xl font-bold font-heading text-primary-foreground/30">
+                      {pilar.letter}
+                    </div>
+                  </div>
 
-                    {/* Conteúdo */}
-                    <div className="space-y-4 text-center md:text-left">
-                      <div>
-                        <h3 className="font-heading text-4xl md:text-5xl font-bold mb-2 text-primary-foreground">
-                          {pilar.title}
-                        </h3>
-                        <p className="text-xl text-primary-foreground/90 font-semibold">
-                          {pilar.subtitle}
-                        </p>
-                      </div>
-                      <p className="text-lg text-primary-foreground/95 leading-relaxed">
-                        {pilar.description}
+                  {/* Conteúdo */}
+                  <div className="space-y-4 text-center md:text-left">
+                    <div>
+                      <h3 className="font-heading text-3xl md:text-4xl font-bold mb-2 text-primary-foreground">
+                        {pilar.title}
+                      </h3>
+                      <p className="text-lg text-primary-foreground/90 font-semibold">
+                        {pilar.subtitle}
                       </p>
                     </div>
+                    <p className="text-base text-primary-foreground/95 leading-relaxed">
+                      {pilar.description}
+                    </p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Indicadores de Navegação */}
-          <div className="flex justify-center gap-2 mt-8">
-            {pilaresFocco.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  activeTab === index
-                    ? 'w-8 bg-primary'
-                    : 'w-2 bg-primary/30 hover:bg-primary/50'
-                }`}
-                aria-label={`Ver pilar ${index + 1}`}
-              />
             ))}
           </div>
         </div>
