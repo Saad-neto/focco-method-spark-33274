@@ -11,6 +11,7 @@ const Index = () => {
   const whatsappNumber = '5583993787450';
   const whatsappMessage = 'Olá, seja bem-vindo! Como posso te ajudar?';
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  const agendamentoLink = 'https://lastlink.com/p/C6DC1AE9C/checkout-payment/';
 
   const pilaresFocco = [
     {
@@ -147,10 +148,10 @@ const Index = () => {
               Clareza mental, inteligência emocional e alta performance para uma vida com propósito
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <a href={agendamentoLink} target="_blank" rel="noopener noreferrer">
                 <Button className="btn-hero text-lg px-10 py-6">
-                  <i className="fab fa-whatsapp mr-3"></i>
-                  Falar no WhatsApp
+                  <i className="fas fa-calendar-check mr-3"></i>
+                  Agendar Sessão
                 </Button>
               </a>
               <Link to="/sobre">
