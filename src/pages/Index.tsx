@@ -78,6 +78,13 @@ const Index = () => {
       link: '/servicos#consultoria',
     },
     {
+      icon: 'fa-users',
+      title: 'Treinamentos de Longo Prazo',
+      description: 'Programas de acompanhamento contínuo para transformação profunda e sustentável.',
+      duracao: '8-12 encontros',
+      link: '/servicos#grupo',
+    },
+    {
       icon: 'fa-building',
       title: 'Treinamentos Corporativos',
       description: 'Palestras e programas para desenvolvimento de equipes e prevenção de burnout.',
