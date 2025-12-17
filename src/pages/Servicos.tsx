@@ -245,7 +245,7 @@ const Servicos = () => {
                 },
                 {
                   pergunta: 'Qual a diferença entre mentoria e terapia?',
-                  resposta: 'A mentoria foca em desenvolvimento, crescimento e conquista de objetivos futuros. A terapia trata questões clínicas do passado. Ambas são complementares e podem ser feitas simultaneamente.',
+                  resposta: 'A terapia é voltada ao cuidado emocional. Ela ajuda a lidar com ansiedade, estresse, sofrimento psicológico e padrões emocionais, promovendo autoconhecimento e equilíbrio interno.\n\nA mentoria é voltada a orientação prática. Ela apoia decisões, definição de metas e direcionamento pessoal ou profissional, com foco em ação e resultados.\n\nAmbas podem ser complementares, desde que realizadas separadamente e com objetivos bem definidos.',
                 },
                 {
                   pergunta: 'Posso pausar o programa se necessário?',
