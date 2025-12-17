@@ -29,8 +29,8 @@ const Sobre = () => {
   const diferenciais = [
     {
       icon: 'fa-chart-line',
-      title: 'Neurociência, mindfulness e comportamento',
-      text: 'Metodologia baseada em neurociência, psicologia positiva e inteligência emocional.',
+      title: 'Abordagem Científica',
+      text: 'Neurociência, mindfulness e comportamento.',
     },
     {
       icon: 'fa-user-check',
