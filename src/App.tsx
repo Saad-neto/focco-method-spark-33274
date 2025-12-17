@@ -7,8 +7,8 @@ import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
 import Servicos from "./pages/Servicos";
 import Contato from "./pages/Contato";
-import Bio from "./pages/Bio";
-import Bio1 from "./pages/Bio1";
+import BioOriginal from "./pages/Bio";
+import Bio from "./pages/Bio1";
 import Bio2 from "./pages/Bio2";
 import Bio3 from "./pages/Bio3";
 import Blog from "./pages/Blog";
@@ -46,7 +46,7 @@ const App = () => (
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/bio" element={<Bio />} />
-          <Route path="/bio-1" element={<Bio1 />} />
+          <Route path="/bio-1" element={<BioOriginal />} />
           <Route path="/bio-2" element={<Bio2 />} />
           <Route path="/bio-3" element={<Bio3 />} />
           <Route path="/blog" element={<Blog />} />
