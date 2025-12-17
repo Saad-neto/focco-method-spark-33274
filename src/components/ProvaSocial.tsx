@@ -24,7 +24,7 @@ const ProvaSocial = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <i className="fas fa-users text-primary text-2xl"></i>
               </div>
-              <p className="text-3xl font-heading font-bold text-primary">1.000+</p>
+              <p className="text-3xl font-heading font-bold text-primary">200+</p>
               <p className="text-sm text-muted-foreground">Pessoas transformadas</p>
             </div>
 

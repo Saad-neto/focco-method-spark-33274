@@ -38,7 +38,7 @@ const QuemSou = () => {
               <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-xl p-6 border-l-4 border-primary shadow-lg">
                 <p className="text-primary font-bold text-xl flex items-center gap-3">
                   <i className="fas fa-users text-2xl"></i>
-                  <span>Mais de 1.000 pessoas impactadas pelo Método FOCCO</span>
+                  <span>Mais de 200 pessoas impactadas pelo Método FOCCO</span>
                 </p>
               </div>
             </div>
