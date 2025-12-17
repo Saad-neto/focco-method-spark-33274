@@ -6,8 +6,8 @@ import GoogleReviews from '@/components/GoogleReviews';
 import ProvaSocial from '@/components/ProvaSocial';
 import QuemSou from '@/components/QuemSou';
 import Credenciais from '@/components/Credenciais';
+import NossaHistoria from '@/components/NossaHistoria';
 import heroImage from '@/assets/hero-bg.jpg';
-import valeriaProfile from '@/assets/valeria-profile.jpg';
 import beneficiosImage from '@/assets/beneficios-focco.jpg';
 
 const Index1 = () => {
@@ -95,57 +95,36 @@ const Index1 = () => {
     <div className="min-h-screen">
       <HeaderV2 />
 
-      {/* Hero Section - MELHORADO com foto Valéria */}
+      {/* Hero Section */}
       <section
-        className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20"
+        className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-20"
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(44, 95, 111, 0.85), rgba(58, 122, 142, 0.75)), url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="container-custom relative z-10 px-4 py-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Coluna Esquerda - Textos e CTAs */}
-            <div className="space-y-8 text-center lg:text-left animate-fade-in">
-              <h1 className="text-primary-foreground font-heading font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
-                Transforme sua vida com o Método FOCCO
-              </h1>
-              <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                Clareza mental, inteligência emocional e alta performance para uma vida com propósito
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                  <Button className="btn-hero text-lg px-10 py-6">
-                    <i className="fab fa-whatsapp mr-3"></i>
-                    Falar no WhatsApp
-                  </Button>
-                </a>
-                <Link to="/sobre">
-                  <Button className="btn-outline bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-10 py-6">
-                    <i className="fas fa-compass mr-3"></i>
-                    Conhecer o Método
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Coluna Direita - Foto Valéria */}
-            <div className="hidden lg:flex justify-center items-center">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-accent/30 to-primary-foreground/30 rounded-3xl blur-2xl"></div>
-                <div className="relative">
-                  <img
-                    src={valeriaProfile}
-                    alt="Valéria Dias - Idealizadora do Método FOCCO"
-                    className="rounded-3xl shadow-2xl w-full max-w-md object-cover"
-                  />
-                  <div className="absolute bottom-6 left-6 right-6 bg-primary-foreground/95 backdrop-blur-sm rounded-xl p-4 shadow-xl">
-                    <p className="font-heading font-bold text-primary text-lg">Valéria Dias</p>
-                    <p className="text-sm text-muted-foreground">Idealizadora do Método FOCCO</p>
-                  </div>
-                </div>
-              </div>
+        <div className="container-custom text-center relative z-10 px-4">
+          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+            <h1 className="text-primary-foreground font-heading font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+              Transforme sua vida com o Método FOCCO
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
+              Clareza mental, inteligência emocional e alta performance para uma vida com propósito
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button className="btn-hero text-lg px-10 py-6">
+                  <i className="fab fa-whatsapp mr-3"></i>
+                  Falar no WhatsApp
+                </Button>
+              </a>
+              <Link to="/sobre">
+                <Button className="btn-outline bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-10 py-6">
+                  <i className="fas fa-compass mr-3"></i>
+                  Conhecer o Método
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -204,6 +183,9 @@ const Index1 = () => {
           </div>
         </div>
       </section>
+
+      {/* Nossa História */}
+      <NossaHistoria />
 
       {/* Quem Sou - HISTÓRIA DA VALÉRIA */}
       <QuemSou />
