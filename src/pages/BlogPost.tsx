@@ -44,23 +44,47 @@ const BlogPost = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Detectar se o conteúdo é Markdown ou HTML
+  const isMarkdown = useMemo(() => {
+    if (!post?.content) return false;
+    // Se contém ## ou ### no início de linhas, é Markdown
+    return /^#{2,3}\s+.+$/m.test(post.content);
+  }, [post?.content]);
+
   // Extrair headings do conteúdo para tabela de conteúdo
   const tableOfContents = useMemo(() => {
     if (!post?.content) return [];
 
-    const headingRegex = /^(#{2,3})\s+(.+)$/gm;
-    const headings: { level: number; text: string; id: string }[] = [];
-    let match;
+    if (isMarkdown) {
+      // Extrair de Markdown
+      const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+      const headings: { level: number; text: string; id: string }[] = [];
+      let match;
 
-    while ((match = headingRegex.exec(post.content)) !== null) {
-      const level = match[1].length;
-      const text = match[2].trim();
-      const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-      headings.push({ level, text, id });
+      while ((match = headingRegex.exec(post.content)) !== null) {
+        const level = match[1].length;
+        const text = match[2].trim();
+        const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+        headings.push({ level, text, id });
+      }
+
+      return headings;
+    } else {
+      // Extrair de HTML
+      const headingRegex = /<h([23])(?:\s+id="([^"]*)")?[^>]*>([^<]+)<\/h\1>/gi;
+      const headings: { level: number; text: string; id: string }[] = [];
+      let match;
+
+      while ((match = headingRegex.exec(post.content)) !== null) {
+        const level = parseInt(match[1]);
+        const text = match[3].trim();
+        const id = match[2] || text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+        headings.push({ level, text, id });
+      }
+
+      return headings;
     }
-
-    return headings;
-  }, [post?.content]);
+  }, [post?.content, isMarkdown]);
 
   const handleShare = async () => {
     const url = window.location.href;
@@ -264,13 +288,14 @@ const BlogPost = () => {
           {/* Metadata */}
           <div className="flex flex-wrap items-center gap-4 text-gray-500 mb-8 pb-6 border-b border-gray-200">
             <div className="flex items-center gap-3">
-              {post.author_avatar && (
-                <img
-                  src={post.author_avatar}
-                  alt={post.author}
-                  className="w-10 h-10 rounded-full object-cover ring-2 ring-[#8B5CF6]/20"
-                />
-              )}
+              <img
+                src={post.author_avatar || '/assets/valeria-foto-optimized.png'}
+                alt={post.author}
+                className="w-10 h-10 rounded-full object-cover ring-2 ring-[#8B5CF6]/20"
+                onError={(e) => {
+                  e.currentTarget.src = '/assets/valeria-foto-optimized.png';
+                }}
+              />
               <div>
                 <p className="font-semibold text-sm text-gray-900">{post.author}</p>
                 <p className="text-xs text-gray-500">Autora</p>
@@ -378,7 +403,7 @@ const BlogPost = () => {
             </button>
           </div>
 
-          {/* Content com Markdown */}
+          {/* Content - Suporta Markdown e HTML */}
           <div className="prose prose-base max-w-none
                        prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
                        prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight prose-h2:scroll-mt-24
@@ -391,27 +416,31 @@ const BlogPost = () => {
                        prose-ol:my-6 prose-ol:text-gray-700
                        prose-blockquote:border-l-4 prose-blockquote:border-[#8B5CF6] prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-600
                        prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8">
-            <ReactMarkdown
-              rehypePlugins={[rehypeRaw, rehypeSanitize]}
-              remarkPlugins={[remarkGfm]}
-              components={{
-                h2: ({ children, ...props }) => {
-                  const text = children?.toString() || '';
-                  const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-                  return <h2 id={id} {...props}>{children}</h2>;
-                },
-                h3: ({ children, ...props }) => {
-                  const text = children?.toString() || '';
-                  const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-                  return <h3 id={id} {...props}>{children}</h3>;
-                },
-                img: ({ ...props }) => (
-                  <img loading="lazy" {...props} />
-                ),
-              }}
-            >
-              {post.content}
-            </ReactMarkdown>
+            {isMarkdown ? (
+              <ReactMarkdown
+                rehypePlugins={[rehypeRaw, rehypeSanitize]}
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  h2: ({ children, ...props }) => {
+                    const text = children?.toString() || '';
+                    const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+                    return <h2 id={id} {...props}>{children}</h2>;
+                  },
+                  h3: ({ children, ...props }) => {
+                    const text = children?.toString() || '';
+                    const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+                    return <h3 id={id} {...props}>{children}</h3>;
+                  },
+                  img: ({ ...props }) => (
+                    <img loading="lazy" {...props} />
+                  ),
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            )}
           </div>
 
           {/* CTA Newsletter no Meio do Post */}
