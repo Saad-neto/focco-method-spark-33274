@@ -275,7 +275,7 @@ const BlogPost = () => {
         <div className="max-w-4xl mx-auto">
           {/* Category */}
           {post.category && (
-            <div className="pt-8 mb-6">
+            <div className="pt-10 mb-8">
               <span className="inline-block px-4 py-1.5 rounded-full bg-[#8B5CF6] text-white text-xs font-semibold uppercase tracking-wide">
                 {post.category}
               </span>
@@ -283,10 +283,10 @@ const BlogPost = () => {
           )}
 
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">{post.title}</h1>
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-relaxed max-w-3xl">{post.title}</h1>
 
           {/* Metadata */}
-          <div className="flex flex-wrap items-center gap-4 text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <div className="flex flex-wrap items-center gap-4 text-gray-500 mb-10 pb-8 border-b border-gray-200">
             <div className="flex items-center gap-3">
               <img
                 src={post.author_avatar || '/assets/valeria-foto-optimized.png'}
@@ -328,13 +328,13 @@ const BlogPost = () => {
           </div>
 
           {/* Excerpt */}
-          <div className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed italic border-l-4 border-[#8B5CF6] pl-6 py-2">
+          <div className="text-base md:text-lg text-gray-700 mb-12 leading-relaxed italic border-l-4 border-[#8B5CF6] pl-6 py-4 max-w-3xl">
             {post.excerpt}
           </div>
 
           {/* Tabela de Conteúdo */}
           {tableOfContents.length > 0 && (
-            <div className="mb-12 bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div className="mb-16 bg-gray-50 rounded-xl p-8 border border-gray-200">
               <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
@@ -367,7 +367,7 @@ const BlogPost = () => {
           )}
 
           {/* Botões de Compartilhamento Social */}
-          <div className="mb-8 flex flex-wrap items-center gap-3 pb-8 border-b border-gray-200">
+          <div className="mb-12 flex flex-wrap items-center gap-3 pb-10 border-b border-gray-200">
             <span className="text-sm font-semibold text-gray-700">Compartilhar:</span>
             <button
               onClick={() => handleSocialShare('facebook')}
@@ -444,15 +444,15 @@ const BlogPost = () => {
           </div>
 
           {/* CTA Newsletter no Meio do Post */}
-          <div className="my-16 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100 shadow-sm">
+          <div className="my-20 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-10 border border-purple-100 shadow-sm">
             <div className="text-center max-w-2xl mx-auto">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-[#8B5CF6] rounded-full mb-4">
-                <Send className="h-6 w-6 text-white" />
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-[#8B5CF6] rounded-full mb-6">
+                <Send className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 💜 Gostando do conteúdo?
               </h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-8 leading-relaxed text-lg">
                 Receba insights exclusivos sobre desenvolvimento pessoal, inteligência emocional e alta performance diretamente no seu email. Sem spam, apenas conteúdo de valor.
               </p>
               <a
@@ -468,12 +468,12 @@ const BlogPost = () => {
           </div>
 
           {/* Seção de Feedback */}
-          <div className="mt-16 pt-8 border-t border-gray-200 mb-8">
-            <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+          <div className="mt-20 pt-10 border-t border-gray-200 mb-10">
+            <div className="bg-gray-50 rounded-xl p-8 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Este conteúdo foi útil para você?
               </h3>
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-base text-gray-600 mb-8">
                 Seu feedback nos ajuda a criar conteúdos cada vez melhores!
               </p>
               <div className="flex justify-center gap-4">
@@ -507,8 +507,8 @@ const BlogPost = () => {
 
           {/* Tags Clicáveis */}
           {post.tags && post.tags.length > 0 && (
-            <div className="mb-12">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-6">
                 <svg className="w-5 h-5 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                 </svg>
