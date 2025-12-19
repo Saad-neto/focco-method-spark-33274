@@ -580,15 +580,15 @@ const BlogPost = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-white/90 text-sm">
                   <div className="flex items-center gap-2">
                     <i className="fas fa-check-circle text-yellow-300"></i>
-                    <span>Primeira sessão focada em VOCÊ</span>
+                    <span>Primeira sessão focada 100% em VOCÊ</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="fas fa-check-circle text-yellow-300"></i>
-                    <span>Sem compromisso</span>
+                    <span>Resultados já na primeira conversa</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="fas fa-check-circle text-yellow-300"></i>
-                    <span>Sentir alívio é possível</span>
+                    <span>Método cientificamente comprovado</span>
                   </div>
                 </div>
               </div>
