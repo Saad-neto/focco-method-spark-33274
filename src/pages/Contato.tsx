@@ -54,38 +54,67 @@ const Contato = () => {
     <div className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="pt-56 pb-20 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container-custom px-4">
+      {/* Hero Section - Agende uma Sessão */}
+      <section className="pt-56 pb-24 bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 relative overflow-hidden">
+        {/* Elementos decorativos */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+
+        <div className="container-custom px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="font-heading mb-6">Vamos Conversar?</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Estamos prontos para ouvir você e iniciar sua jornada de transformação
+            {/* Emoji/Icon */}
+            <div className="mb-6">
+              <span className="text-6xl">😰</span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Tá estressado?<br />Se sente ansioso?
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto">
+              Agende uma sessão e <strong className="text-yellow-300">SINTA a diferença</strong><br />
+              já na primeira conversa.
             </p>
 
-            {/* CTA Principal WhatsApp */}
-            <div className="inline-block">
+            {/* CTA Button */}
+            <div className="mb-10">
               <a
-                href={whatsappLink}
+                href="https://lastlink.com/p/C6DC1AE9C/checkout-payment/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block"
+                className="inline-block"
               >
-                <Button className="btn-hero text-lg px-12 py-8 h-auto group">
-                  <i className="fab fa-whatsapp text-3xl mr-4 group-hover:scale-110 transition-transform"></i>
-                  <div className="text-left">
-                    <div className="font-bold">Fale Conosco no WhatsApp</div>
-                    <div className="text-sm font-normal opacity-90">Clique para iniciar a conversa</div>
-                  </div>
-                </Button>
+                <button className="bg-white text-purple-600 px-10 py-5 rounded-full text-xl font-bold hover:bg-yellow-300 hover:text-purple-700 transition-all duration-300 shadow-2xl hover:shadow-yellow-300/50 hover:scale-105 transform">
+                  <i className="fas fa-calendar-check mr-3"></i>
+                  Quero Agendar Agora
+                </button>
               </a>
             </div>
 
-            <p className="text-muted-foreground text-sm mt-6">
-              <i className="fas fa-check-circle text-accent mr-2"></i>
-              Atendimento humanizado e personalizado
-            </p>
+            {/* Benefícios */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white/90 text-sm">
+              <div className="flex items-center gap-2">
+                <i className="fas fa-check-circle text-yellow-300"></i>
+                <span>Primeira sessão focada em VOCÊ</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <i className="fas fa-check-circle text-yellow-300"></i>
+                <span>Sem compromisso</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <i className="fas fa-check-circle text-yellow-300"></i>
+                <span>Sentir alívio é possível</span>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Ondas decorativas */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
         </div>
       </section>
 

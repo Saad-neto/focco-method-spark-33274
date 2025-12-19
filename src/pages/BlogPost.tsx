@@ -541,6 +541,60 @@ const BlogPost = () => {
             </div>
           </div>
 
+          {/* CTA Agendar Sessão */}
+          <div className="my-20">
+            <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-center shadow-2xl relative overflow-hidden">
+              {/* Padrão de fundo */}
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+
+              <div className="relative z-10">
+                {/* Emoji */}
+                <div className="mb-4">
+                  <span className="text-5xl">🎯</span>
+                </div>
+
+                {/* Título */}
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  Tá estressado? Se sente ansioso?
+                </h3>
+
+                {/* Subtítulo */}
+                <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                  Agende uma sessão e <strong className="text-yellow-300">SINTA a diferença</strong> já na primeira conversa.
+                </p>
+
+                {/* Botão */}
+                <a
+                  href="https://lastlink.com/p/C6DC1AE9C/checkout-payment/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <button className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-yellow-300 hover:text-purple-700 transition-all duration-300 shadow-xl hover:shadow-yellow-300/50 hover:scale-105 transform">
+                    <i className="fas fa-calendar-check mr-2"></i>
+                    Quero Agendar Agora
+                  </button>
+                </a>
+
+                {/* Benefícios */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-white/90 text-sm">
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-check-circle text-yellow-300"></i>
+                    <span>Primeira sessão focada em VOCÊ</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-check-circle text-yellow-300"></i>
+                    <span>Sem compromisso</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-check-circle text-yellow-300"></i>
+                    <span>Sentir alívio é possível</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Tags Clicáveis */}
           {post.tags && post.tags.length > 0 && (
             <div className="mb-16">
