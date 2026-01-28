@@ -1,305 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- =====================================================
-       SITEMAP GERADO AUTOMATICAMENTE
-       Data: 2025-12-29
-       Total de URLs: 48
-  ===================================================== -->
 
-  <!-- Páginas Principais -->
   <url>
     <loc>https://focconavida.com.br/</loc>
-    <lastmod>2025-12-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://focconavida.com.br/sobre</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://focconavida.com.br/metodo</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://focconavida.com.br/servicos</loc>
-    <lastmod>2025-12-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://focconavida.com.br/contato</loc>
-    <lastmod>2025-12-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://focconavida.com.br/blog</loc>
-    <lastmod>2025-12-30</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- =====================================================
-       ARTIGOS DO BLOG
-       Total: 42 artigos publicados
-  ===================================================== -->
+  <url>
+    <loc>https://focconavida.com.br/metodo</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://focconavida.com.br/sobre</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://focconavida.com.br/contato</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://focconavida.com.br/depoimentos</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://focconavida.com.br/blog/janeiro-aceitar-antes-de-mudar-autoaceitacao</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://focconavida.com.br/blog/como-preparar-morar-exterior-sem-adoecer</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://focconavida.com.br/blog/estimule-criatividade-aprenda-algo-novo</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <url>
     <loc>https://focconavida.com.br/blog/planejamento-ano-novo-sem-pressao</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/como-ser-mais-flexivel-profissional</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/destravando-potencial-profissional</loc>
     <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/como-melhorar-minha-inseguranca</loc>
-    <lastmod>2025-12-20</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/como-sair-da-zona-de-conforto-sem-se-perder</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/meditacao-para-quem-nao-consegue-parar-de-pensar</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/desenvolver-ato-amor-proprio</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/lidar-adversidades-vida-tranquila</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/4-caminhos-excelentes-resultados-profissionais</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/dinheiro-consequencia-trabalho-bem-feito</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/consequencias-ansiedade-nao-tratada</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/se-de-um-descanso</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/foque-solucao-nao-problema</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/aprender-algo-novo-diariamente</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/trabalhar-home-office-produtividade</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/maior-erro-profissional-perfeccionista</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/dor-cronica-incapacitante-mindfulness</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/mindfulness-dor-cronica</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/nao-seja-sua-dor</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/flexibilidade-vida-pessoal-profissional</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/energia-mental-limite-esgotando-errado</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/culpa-paralisa-transformar-erro-aprendizado</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/construir-confianca-verdadeira</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/nao-consegue-parar-pensar-trabalho</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/falta-atencao-retrabalho</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/atencao-ao-seu-corpo</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/perfeccionismo-adoece</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/ansiedade-nao-precisa-parar-voce</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/como-metodo-focco-transformar-vida</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/por-que-procrastino-tanto</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/importancia-de-aprender-dizer-nao</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/importancia-respiracao-consciente</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/transicao-de-carreira-com-qualidade</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/como-diminuir-estresse</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/desenvolvendo-equilibrio-emocional</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/por-que-tanta-gente-ansiosa</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/5-sinais-precisa-coaching-pessoal</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/importancia-da-pausa-na-vida-diaria</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/regular-emocoes-profissional-notado</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/investir-mudar-estilo-vida-transforma-futuro</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/importancia-autoconhecimento-jornada-profissional</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://focconavida.com.br/blog/como-viver-momento-presente</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
 </urlset>

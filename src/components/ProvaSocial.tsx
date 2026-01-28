@@ -33,7 +33,7 @@ const ProvaSocial = () => {
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <i className="fas fa-award text-accent text-2xl"></i>
               </div>
-              <p className="text-3xl font-heading font-bold text-accent">15+</p>
+              <p className="text-3xl font-heading font-bold text-accent">8+</p>
               <p className="text-sm text-muted-foreground">Anos de experiência</p>
             </div>
           </div>
